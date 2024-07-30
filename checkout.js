@@ -42,8 +42,8 @@ function sendCheckoutData(data) {
     }
 }
 
-// Start
-(() => {
+// Main execution function
+function main(config) {
     let checkoutData = config;
 
     if (config.useAutoExtraction) {
@@ -61,4 +61,4 @@ function sendCheckoutData(data) {
 
     // Send the checkout data
     sendCheckoutData(checkoutData);
-})();
+}
