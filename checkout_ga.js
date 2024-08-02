@@ -22,7 +22,7 @@ function extractPageData() {
 // Function to send checkout data to parent
 function sendCheckoutData(data) {
     try {
-        gtag('event', 'initiate_checkout', {
+        gtag('event', 'begin_checkout', {
             'value': data.totalValue,
             'currency': data.currency,
             'items': [
