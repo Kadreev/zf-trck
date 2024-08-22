@@ -22,7 +22,7 @@ function extractPageData() {
 // Function to send checkout data to parent
 function sendCheckoutData(data) {
     try {
-        const postObject = JSON.stringify({
+        const postObject = {
             event: data.eventName,
             value: data.totalValue,
             currency: data.currency,
@@ -34,7 +34,7 @@ function sendCheckoutData(data) {
                     'quantity': data.quantity
                 }
             ]
-        });
+        };
         parent.postMessage(postObject, data.parentDomain);
         console.log('Checkout data sent:', postObject);
     } catch (e) {
